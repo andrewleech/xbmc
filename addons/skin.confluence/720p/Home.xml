@@ -1083,7 +1083,7 @@
 			<left>20</left>
 			<top>55r</top>
 			<include>Window_OpenClose_Animation</include>
-			<control type="button" id="20">
+<!-- 			<control type="button" id="20">
 				<description>Power push button</description>
 				<left>55</left>
 				<top>0</top>
@@ -1107,7 +1107,7 @@
 				<height>35</height>
 				<aspectratio>keep</aspectratio>
 				<texture>icon_power.png</texture>
-			</control>
+			</control> -->
 			<control type="button" id="21">
 				<description>Favourites push button</description>
 				<left>0</left>
