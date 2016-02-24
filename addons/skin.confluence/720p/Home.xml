@@ -1178,7 +1178,7 @@
 					<font>font28_title</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
-					<label>[B]$INFO[Window(Weather).Property(Current.Temperature)][/B]</label>
+					<label>[B]$INFO[Window(Weather).Property(Day0.HighTemp)][/B]</label>
 				</control>
 				<control type="label">
 					<description>Temp Units</description>
@@ -1189,7 +1189,7 @@
 					<label>$INFO[System.TemperatureUnits]</label>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
-					<visible>!IsEmpty(Window(Weather).Property(Current.Temperature))</visible>
+					<visible>!IsEmpty(Window(Weather).Property(Day0.HighTemp))</visible>
 				</control>
 				<control type="label">
 					<description>Conditions Label</description>
@@ -1197,7 +1197,7 @@
 					<height>22</height>
 					<font>font10</font>
 					<aligny>center</aligny>
-					<label>$INFO[Window(Weather).Property(Current.Condition),  ]</label>
+					<label>$INFO[Window(Weather).Property(Day0.Outlook),  ]</label>
 					<textcolor>grey2</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
