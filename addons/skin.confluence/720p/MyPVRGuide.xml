@@ -30,10 +30,11 @@
 				<control type="group">
 					<include>VisibleFadeEffect</include>
 					<control type="image">
-						<left>55</left>
-						<top>60</top>
-						<width>1170</width>
-						<height>600</height>
+						<!-- Background image -->
+						<left>15</left>
+						<top>40</top>
+						<width>1250</width>
+						<height>640</height>
 						<texture border="15">ContentPanel.png</texture>
 					</control>
 					<control type="image">
