@@ -8,9 +8,9 @@
 			<include>VisibleFadeEffect</include>
 			<control type="image">
 				<description>separator image</description>
-				<left>80</left>
-				<top>101</top>
-				<width>1100</width>
+				<left>20</left>
+				<top>81</top>
+				<width>1300</width>
 				<height>1</height>
 				<colordiffuse>88FFFFFF</colordiffuse>
 				<texture>separator2.png</texture>
@@ -18,10 +18,10 @@
 			<control type="epggrid" id="10">
 				<viewtype label="19032">list</viewtype>
 				<description>EPG Grid</description>
-				<left>80</left>
-				<top>71</top>
-				<width>1135</width>
-				<height>419</height>
+				<left>40</left>
+				<top>51</top>
+				<width>1215</width>
+				<height>494</height>
 				<pagecontrol>10</pagecontrol>
 				<scrolltime>350</scrolltime>
 				<timeblocks>40</timeblocks>
@@ -58,53 +58,53 @@
 						<visible>ListItem.Property(DateLabel)</visible>
 					</control>
 				</rulerlayout>
-				<channellayout height="48" width="280">
+				<channellayout height="28" width="200">
 					<control type="image">
 						<left>0</left>
 						<top>0</top>
-						<width>270</width>
-						<height>48</height>
+						<width>190</width>
+						<height>38</height>
 						<texture border="2">MenuItemNF.png</texture>
 						<include>VisibleFadeEffect</include>
 					</control>
 					<control type="label">
 						<left>5</left>
-						<top>5</top>
+						<top>0</top>
 						<width>40</width>
 						<height>35</height>
 						<font>font12</font>
 						<align>left</align>
-						<aligny>center</aligny>
+						<aligny>top</aligny>
 						<textcolor>grey</textcolor>
 						<selectedcolor>grey</selectedcolor>
 						<info>ListItem.ChannelNumberLabel</info>
 					</control>
-					<control type="image">
+<!-- 					<control type="image">
 						<left>45</left>
 						<top>4</top>
 						<width>45</width>
-						<height>44</height>
+						<height>34</height>
 						<texture>$INFO[ListItem.Icon]</texture>
 						<aspectratio>keep</aspectratio>
-					</control>
+					</control> -->
 					<control type="label" id="1">
-						<left>94</left>
+						<left>44</left>
 						<top>0</top>
 						<width>160</width>
-						<height>48</height>
-						<font>font13</font>
-						<aligny>center</aligny>
+						<height>38</height>
+						<font>font12</font>
+						<aligny>top</aligny>
 						<selectedcolor>selected</selectedcolor>
 						<align>left</align>
 						<label>$INFO[ListItem.ChannelName]</label>
 					</control>
 				</channellayout>
-				<focusedchannellayout height="48" width="280">
+				<focusedchannellayout height="28" width="200">
 					<control type="image">
 						<left>0</left>
 						<top>0</top>
 						<width>270</width>
-						<height>48</height>
+						<height>36</height>
 						<texture border="2">MenuItemNF.png</texture>
 						<visible>!Control.HasFocus(10)</visible>
 						<include>VisibleFadeEffect</include>
@@ -113,51 +113,59 @@
 						<left>0</left>
 						<top>0</top>
 						<width>270</width>
-						<height>48</height>
+						<height>29</height>
 						<texture border="2">MenuItemFO.png</texture>
 						<visible>Control.HasFocus(10)</visible>
 						<include>VisibleFadeEffect</include>
 					</control>
 					<control type="label">
 						<left>5</left>
-						<top>5</top>
+						<top>0</top>
 						<width>40</width>
 						<height>35</height>
 						<font>font12</font>
 						<align>left</align>
-						<aligny>center</aligny>
+						<aligny>top</aligny>
 						<textcolor>grey</textcolor>
 						<selectedcolor>grey</selectedcolor>
 						<info>ListItem.ChannelNumberLabel</info>
 					</control>
-					<control type="image">
+<!-- 					<control type="image">
 						<left>45</left>
 						<top>4</top>
 						<width>45</width>
-						<height>44</height>
+						<height>34</height>
 						<texture>$INFO[ListItem.Icon]</texture>
 						<aspectratio>keep</aspectratio>
-					</control>
+					</control> -->
 					<control type="label" id="1">
-						<left>94</left>
+						<left>44</left>
 						<top>0</top>
 						<width>160</width>
-						<height>48</height>
+						<height>38</height>
 						<font>font13</font>
-						<aligny>center</aligny>
+						<aligny>top</aligny>
 						<selectedcolor>selected</selectedcolor>
 						<align>left</align>
 						<label>$INFO[ListItem.ChannelName]</label>
 					</control>
 				</focusedchannellayout>
-				<itemlayout height="48" width="40">
+				<itemlayout height="38" width="40">
 					<control type="image" id="2">
 						<width>40</width>
-						<height>48</height>
+						<height>29</height>
 						<left>0</left>
 						<top>0</top>
 						<aspectratio>stretch</aspectratio>
 						<texture border="3">epg-genres/$INFO[ListItem.Property(GenreType)].png</texture>
+					</control>
+					<control type="image" id="14">
+						<width>40</width>
+						<height>29</height>
+						<left>0</left>
+						<top>0</top>
+						<visible>ListItem.HasTimer</visible>
+						<texture border="5">EpgRecord.png</texture>
 					</control>
 					<control type="label" id="1">
 						<left>10</left>
@@ -170,15 +178,15 @@
 						<align>left</align>
 						<info>ListItem.Label</info>
 					</control>
-					<control type="image">
+<!-- 					<control type="image">
 						<left>6</left>
 						<top>28</top>
 						<width>24</width>
 						<height>16</height>
 						<texture>PVR-IsRecording.png</texture>
 						<visible>ListItem.IsRecording</visible>
-					</control>
-					<control type="image">
+					</control> -->
+<!-- 					<control type="image">
 						<left>6</left>
 						<top>28</top>
 						<width>16</width>
@@ -193,19 +201,27 @@
 						<height>16</height>
 						<texture>PVR-HasRecording.png</texture>
 						<visible>ListItem.HasRecording + !ListItem.IsRecording + !ListItem.HasTimer</visible>
-					</control>
+					</control> -->
 				</itemlayout>
-				<focusedlayout height="48" width="40">
+				<focusedlayout height="38" width="40">
 					<control type="image" id="14">
 						<width>40</width>
-						<height>48</height>
+						<height>29</height>
 						<left>0</left>
 						<top>0</top>
 						<texture border="5">folder-focus.png</texture>
 					</control>
+					<control type="image" id="14">
+						<width>40</width>
+						<height>29</height>
+						<left>0</left>
+						<top>0</top>
+						<visible>ListItem.HasTimer</visible>
+						<texture border="5">EpgRecord.png</texture>
+					</control>
 					<control type="image" id="2">
 						<width>40</width>
-						<height>48</height>
+						<height>29</height>
 						<left>0</left>
 						<top>0</top>
 						<aspectratio>stretch</aspectratio>
@@ -222,14 +238,15 @@
 						<align>left</align>
 						<info>ListItem.Label</info>
 					</control>
-					<control type="image">
+					<!-- <control type="image">
 						<left>6</left>
 						<top>28</top>
-						<width>24</width>
+						<width></width>
 						<height>16</height>
 						<texture>PVR-IsRecording.png</texture>
 						<visible>ListItem.IsRecording</visible>
-					</control>
+      					<aspectratio align="right">keep</aspectratio>
+					</control> --><!-- 
 					<control type="image">
 						<left>6</left>
 						<top>28</top>
@@ -245,45 +262,88 @@
 						<height>16</height>
 						<texture>PVR-HasRecording.png</texture>
 						<visible>ListItem.HasRecording + !ListItem.IsRecording + !ListItem.HasTimer</visible>
-					</control>
+					</control> -->
 				</focusedlayout>
 			</control>
 			<control type="group">
+				<!-- Bottom show description -->
 				<visible>!IsEmpty(ListItem.Label)</visible>
 				<left>80</left>
-				<top>508</top>
-				<control type="image">
+				<top>558</top>
+				<width>1240</width>
+<!-- 				<control type="image">
 					<left>62</left>
 					<top>6</top>
 					<width>130</width>
 					<height>130</height>
 					<texture background="true">$INFO[ListItem.Icon]</texture>
 					<aspectratio align="center" aligny="top">keep</aspectratio>
-				</control>
+				</control> -->
 				<control type="label">
-					<left>280</left>
+					<left>0</left>
 					<top>0</top>
-					<width>840</width>
+					<width>1140</width>
 					<height>20</height>
 					<label>[B]$INFO[ListItem.Label]$INFO[ListItem.EpisodeName, (,)][/B]</label>
 					<font>font13</font>
 					<textcolor>white</textcolor>
 				</control>
 				<control type="label">
-					<left>280</left>
-					<top>25</top>
-					<width>840</width>
+					<align>right</align>
+					<centerright>160</centerright>
+					<top>0</top>
+					<width>160</width>
 					<height>20</height>
-					<label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ]$INFO[ListItem.Season, • $LOCALIZE[20373] ]$INFO[ListItem.Episode, • $LOCALIZE[20359] ]$INFO[ListItem.Genre, • ]</label>
+					<label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ]</label>
 					<font>font12</font>
 					<textcolor>grey</textcolor>
 				</control>
+				<control type="label">
+					<align>right</align>
+					<centerright>210</centerright>
+					<top>20</top>
+					<width>260</width>
+					<height>20</height>
+					<label>$INFO[ListItem.Season, • $LOCALIZE[20373] ]$INFO[ListItem.Episode, • $LOCALIZE[20359] ]$INFO[ListItem.Genre, • ]</label>
+					<font>font12</font>
+					<textcolor>grey</textcolor>
+				</control>
+				<control type="label">
+					<align>left</align>
+					<top>24</top>
+					<width>260</width>
+					<height>20</height>
+					<label> • Recording • </label>
+					<font>font12</font>
+					<textcolor>red</textcolor>
+					<visible>ListItem.IsRecording</visible>
+				</control>
+				<control type="label">
+					<align>left</align>
+					<top>24</top>
+					<width>260</width>
+					<height>20</height>
+					<label> • Was Recorded • </label>
+					<font>font12</font>
+					<textcolor>red</textcolor>
+					<visible>ListItem.HasRecording + !ListItem.IsRecording + !ListItem.HasTimer</visible>
+				</control>
+				<control type="label">
+					<align>left</align>
+					<top>24</top>
+					<width>260</width>
+					<height>20</height>
+					<label> • Will Record • </label>
+					<font>font12</font>
+					<textcolor>red</textcolor>
+					<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
+				</control>
 				<control type="textbox">
 					<description>Plot value</description>
-					<left>280</left>
-					<top>57</top>
-					<width>840</width>
-					<height>63</height>
+					<left>0</left>
+					<top>47</top>
+					<width>1140</width>
+					<height>43</height>
 					<font>font12</font>
 					<align>justify</align>
 					<textcolor>grey</textcolor>
